@@ -2,6 +2,7 @@ import 'package:assignment/common/app_bar/basic_app_bar.dart';
 import 'package:assignment/common/button/basic_app_button.dart';
 import 'package:assignment/presentation/home/widgets/update.dart';
 import 'package:assignment/presentation/home/widgets/uploaded_document.dart';
+import 'package:assignment/presentation/notifications/pages/notifications.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,9 @@ class HomePage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 40,right: 40,bottom: 10),
-            child: BasicAppButton(title: "Continue - \$12.99 total", onPress: (){}),
+            child: BasicAppButton(title: "Continue - \$12.99 total", onPress: (){
+              Navigator.push(context, MaterialPageRoute(builder: (_)=>NotificationsPage()));
+            }),
           )
 
         ],
